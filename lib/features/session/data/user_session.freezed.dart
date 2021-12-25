@@ -44,16 +44,16 @@ const $UserSession = _$UserSessionTearOff();
 
 /// @nodoc
 mixin _$UserSession {
-// ignore: invalid_annotation_target
+
   @JsonKey(name: 'token')
   String? get accessToken =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+      throw _privateConstructorUsedError; 
   @JsonKey(name: 'user_display_name')
   String? get username =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+      throw _privateConstructorUsedError; 
   @JsonKey(name: 'user_email')
   String? get email =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+      throw _privateConstructorUsedError; 
   @JsonKey(name: 'user_id')
   String? get userID => throw _privateConstructorUsedError;
 
@@ -175,16 +175,16 @@ class _$_UserSession implements _UserSession {
   factory _$_UserSession.fromJson(Map<String, dynamic> json) =>
       _$$_UserSessionFromJson(json);
 
-  @override // ignore: invalid_annotation_target
+  @override 
   @JsonKey(name: 'token')
   final String? accessToken;
-  @override // ignore: invalid_annotation_target
+  @override 
   @JsonKey(name: 'user_display_name')
   final String? username;
-  @override // ignore: invalid_annotation_target
+  @override 
   @JsonKey(name: 'user_email')
   final String? email;
-  @override // ignore: invalid_annotation_target
+  @override 
   @JsonKey(name: 'user_id')
   final String? userID;
 
@@ -234,16 +234,16 @@ abstract class _UserSession implements UserSession {
   factory _UserSession.fromJson(Map<String, dynamic> json) =
       _$_UserSession.fromJson;
 
-  @override // ignore: invalid_annotation_target
+  @override 
   @JsonKey(name: 'token')
   String? get accessToken;
-  @override // ignore: invalid_annotation_target
+  @override 
   @JsonKey(name: 'user_display_name')
   String? get username;
-  @override // ignore: invalid_annotation_target
+  @override 
   @JsonKey(name: 'user_email')
   String? get email;
-  @override // ignore: invalid_annotation_target
+  @override 
   @JsonKey(name: 'user_id')
   String? get userID;
   @override

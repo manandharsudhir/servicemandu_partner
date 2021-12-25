@@ -15,7 +15,7 @@ class SessionProvider extends ChangeNotifier {
   }
 
   Reader read;
-  AuthState state = AuthState.unknown();
+  AuthState state = const AuthState.unknown();
 
   Future<void> checkAuthState() async {
     await Future.delayed(const Duration(milliseconds: 500));

@@ -21,40 +21,40 @@ class CustomColors {
 }
 
 class TextStyles {
-  static final primaryText = TextStyle(
+  static const primaryText = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
   );
 
-  static final secondaryText =
-      const TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
+  static const secondaryText =
+      TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
 
-  static final heading = const TextStyle(
+  static const heading = TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.bold,
       color: CustomColors.primaryColor);
-  static final title = TextStyle(
+  static const title = TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.bold,
       color: CustomColors.secondaryBtnColor);
 
-  static final appBarText = TextStyle(
+  static const appBarText = TextStyle(
     color: Colors.black,
     fontSize: 18,
     fontWeight: FontWeight.bold,
   );
 
-  static final smallTitle = TextStyle(
+  static const smallTitle = TextStyle(
     color: Colors.black,
     fontSize: 14,
     fontWeight: FontWeight.bold,
   );
 
-  static final smallText =
+  static const smallText =
       TextStyle(color: CustomColors.primaryColor, fontSize: 12);
 
-  static final captionText = TextStyle(fontSize: 14, color: CustomColors.gray3);
+  static const captionText = TextStyle(fontSize: 14, color: CustomColors.gray3);
 
-  static final captionButtonText =
+  static const captionButtonText =
       TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
 }
