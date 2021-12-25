@@ -1,10 +1,7 @@
-import 'dart:convert';
 import 'dart:developer';
-import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:liquoreland/config/config.dart';
+import 'package:servicemandu_partner_new/config/config.dart';
 import 'network_exceptions.dart';
 
 class BaseClient {
@@ -22,8 +19,8 @@ class BaseClient {
 
   void _setupAuthHeaderInterceptor() {
     //get token
-    var _authToken = base64.encode(utf8.encode(
-        dotenv.env['consumerKey']! + ":" + dotenv.env['consumerSecret']!));
+    // var _authToken = base64.encode(utf8.encode(
+    //     dotenv.env['consumerKey']! + ":" + dotenv.env['consumerSecret']!));
     _dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (RequestOptions options, RequestInterceptorHandler r) async {
@@ -32,7 +29,7 @@ class BaseClient {
           // TODO setup auth session here
           _dio.lock();
           options.headers = {
-            HttpHeaders.authorizationHeader: "Basic $_authToken"
+            // HttpHeaders.authorizationHeader: "Basic $_authToken"
           };
           // continue the operation
           r.next(options);
@@ -100,10 +97,10 @@ class BaseClient {
         options: options,
         cancelToken: cancelToken,
       );
-      print("Response" + res.toString());
+      log("Response" + res.toString());
       return res.data;
     } on DioError catch (e) {
-      print("Exception" + e.toString());
+      log("Exception" + e.toString());
       throw e.toNetworkException();
     }
   }

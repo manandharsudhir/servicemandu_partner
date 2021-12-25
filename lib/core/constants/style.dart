@@ -27,9 +27,9 @@ class TextStyles {
   );
 
   static final secondaryText =
-      TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
+      const TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
 
-  static final heading = TextStyle(
+  static final heading = const TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.bold,
       color: CustomColors.primaryColor);
